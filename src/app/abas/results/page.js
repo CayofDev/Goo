@@ -1,18 +1,21 @@
 import React from "react"
 import styles from "./page.module.css"
-import localImageLogo from "../../../../public/sign-in.svg";
+import localImageLogo from "../../../../public/arrow-left.svg";
+import Image from "next/image";
 
 export default function EReceipt1() {
   return (
-   <div className={styles.header}>
+   <div className={styles.container}>
+    <div className={styles.header}> 
     <Image
-    src={localImageLogo}
-    alt="Logo"
-    className={styles.logo}
+        src={localImageLogo}
+        alt="Logo"
+        className={styles.logo}
     />
     <h2>Detalhes da NF</h2>
+    </div>
     <div className={styles.details}>
-        <h1>Prestador de Serviço</h1>
+        <h3>Prestador de Serviço</h3>
         <div className={styles.card}>
             <ul className={styles.list}>
                 <li className={styles.itemList}>Razão Social <a>Alternavel</a></li>
@@ -22,13 +25,24 @@ export default function EReceipt1() {
                 <li className={styles.itemList}>Inscrição Municipal <a>Alternavel</a></li>
             </ul>
         </div>
-        <h1>Orgão Gerador</h1>
+        <h3>Orgão Gerador</h3>
         <div className={styles.card}>
             <ul className={styles.list}>
                 <li className={styles.itemList}>Cód. Municipio <a>Alternavel</a></li>
                 <li className={styles.itemList}>Endereço <a>Alternavel</a></li>
             </ul>
-        </div> <h1>Declaração de prestação de Serviço</h1>
+        </div>
+        <h3>Tomador</h3>
+        <div className={styles.card}>
+            <ul className={styles.list}>
+                <li className={styles.itemList}>Inscrição Municipal <a>Alternavel</a></li>
+                <li className={styles.itemList}>CNPJ <a>Alternavel</a></li>
+                <li className={styles.itemList}>Razão Social <a>Alternavel</a></li>
+                <li className={styles.itemList}>Endereço <a>Alternavel</a></li>
+                <li className={styles.itemList}>Email <a>Alternavel</a></li>    
+            </ul>
+        </div>
+        <h3>Declaração de prestação de Serviço</h3>
         <div className={styles.card}>
             <ul className={styles.list}>
             <li className={styles.itemList}>Rps - Numero - Série - Tipo <a>Alternavel</a></li>
@@ -60,13 +74,7 @@ export default function EReceipt1() {
             <li className={styles.itemList}>Incentivo Fiscal <a>Alternavel</a></li>
             </ul>
         </div>
-        <h1>Tomador</h1>
-        <div className={styles.card}>
-            <ul className={styles.list}>
-                <li className={styles.itemList}>Cód. Municipio <a>Alternavel</a></li>
-                <li className={styles.itemList}>Endereço <a>Alternavel</a></li>
-            </ul>
-        </div>
+        
     </div>
    </div>
   )
